@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据行列转换工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-with-back">
+            <button id="back-btn" class="back-button">← 返回</button>
+            <h1>数据行列转换工具</h1>
+        </div>
+        <div class="description">
+            <p>将您的数据从行转列或列转行，支持CSV、JSON等多种格式</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-header">
+                <h2>输入数据</h2>
+            </div>
+            <textarea id="input-data" placeholder="在此输入您的数据..."></textarea>
+            <div class="separator-option">
+                <label for="separator">分隔符:</label>
+                <input type="text" id="separator" value="," maxlength="3" placeholder="默认为英文逗号">
+            </div>
+            <div class="button-group">
+                <button id="clear-input">清空输入</button>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button id="transpose-btn" class="primary-btn">行列转换</button>
+            <button id="reset-btn" class="secondary-btn">重置</button>
+        </div>
+        
+        <div class="output-section">
+            <div class="output-header">
+                <h2>转换结果</h2>
+            </div>
+            <textarea id="output-data" readonly></textarea>
+            <div class="button-group">
+                <button id="copy-result">复制结果</button>
+                <button id="download-result">下载结果</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
